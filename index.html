@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Future Athlete Agency</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+
+    <style>
+      /* Body: slightly lighter dark background and light gray text */
+      body {
+          background-color: #1a1a1a;
+          color: #707070;
+      }
+      /* Links: use red accent only */
+      a {
+          color: #e60000;
+      }
+      a:hover,
+      a:focus {
+          color: #ff3333;
+      }
+      /* Navbar styling */
+      .navbar-brand, .tm-nav-link {
+          color: #f2f2f2; /* very light gray instead of white */
+      }
+      .tm-navbar {
+          background-color: transparent;
+      }
+      .tm-navbar.scroll {
+          background-color: #000;
+          border-bottom: 1px solid #444;
+      }
+      /* Hero Section */
+      .tm-hero-title {
+          font-size: 3.5rem;
+          color: #f2f2f2; /* very light gray */
+          text-shadow: 2px 2px 4px #000;
+      }
+      .tm-hero-subtitle {
+          color: #ddd;
+          text-shadow: 1px 1px 3px #000;
+      }
+      /* Buttons */
+      .tm-btn-primary {
+          background-color: #e60000;
+          border: none;
+          color: #fff;
+      }
+      .tm-btn-primary:hover,
+      .tm-btn-primary:focus {
+          background-color: #ff3333;
+      }
+      /* Section titles and texts */
+      .tm-section-title {
+          color: #e60000;
+          text-shadow: 1px 1px 2px #000;
+      }
+      .tm-intro-text, .tm-section-desc {
+          color: #ccc;
+      }
+      /* Footer: fixed at the bottom with smaller font and padding */
+      .tm-footer {
+          background-color: #000;
+          color: #777;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          z-index: 100;
+          text-align: center;
+          padding: 3px 6px;
+          font-size: 0.65rem;
+      }
+      .tm-footer a {
+          color: inherit;
+      }
+      .tm-footer a:hover {
+          color: #ff3333;
+      }
+      /* Overlay for parallax sections */
+      .tm-bg-overlay {
+          background-color: rgba(0, 0, 0, 0.5);
+      }
+      /* Logo styling for navbar */
+      .navbar-logo {
+          max-height: 40px;
+          margin-right: 10px;
+      }
+      /* Updated Contact Logo styling: positioned in the top-right corner and bigger */
+      .contact-logo {
+          position: absolute;
+          top: 350px;
+          right: 180px;
+          width: 340px;
+      }
+      /* Additional styling for combined telephone and WhatsApp option */
+      .contact-item a.item-link {
+          display: inline-flex;
+          align-items: center;
+      }
+      .contact-split {
+          margin: 0 10px;
+          font-size: 1.8rem;
+          color: #fff;
+      }
+      /* Ensure gallery images are all the same medium size */
+      .tm-gallery-item img {
+          width: 300px;
+          height: 330px;
+          object-fit: cover;
+      }
+      /* Media Query for Phone Devices */
+      @media (max-width: 767px) {
+        /* Center Our Story image on phone devices */
+        #ourstory img {
+          display: block;
+          margin: 0 auto;
+        }
+        /* Adjust the FAA bottom page logo for phone screens */
+        .contact-logo {
+          position: relative;
+          top: 0;
+          right: 0;
+          width: 250px;
+          margin: 10px auto;
+          display: block;
+        }
+        /* Make the footer and footer text smaller on mobile */
+        .tm-footer {
+          font-size: 0.485rem;
+          padding: 2px 4px;
+        }
+      }
+    </style>
+  </head>
+  <body>    
+    <!-- Hero section -->
+    <section id="infinite" class="text-white tm-font-big tm-parallax">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">              
+        <div class="container">   
+          <div class="tm-next">
+              <!-- Added PNG logo (FAA-logo.png) next to navbar brand; text is very light gray -->
+              <a href="#infinite" class="navbar-brand">
+                <img src="img/FAA-logo.png" alt="FAA Logo" class="navbar-logo">
+                Future Athlete Agency
+              </a>
+          </div>             
+          
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars navbar-toggler-icon"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#infinite">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#whatwedo">Our Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="#testimonials">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#contact">Contact</a>
+              </li>                    
+            </ul>
+          </div>        
+        </div>
+      </nav>
+      
+      <div class="text-center tm-hero-text-container">
+        <div class="tm-hero-text-container-inner">
+            <h2 class="tm-hero-title">Future Athlete Agency</h2>
+            <p class="tm-hero-subtitle">
+              Premier Sports Management &amp; Assistance<br>
+              Connecting Talent with Opportunity
+            </p>
+        </div>        
+      </div>
+
+      <div class="tm-next tm-intro-next">
+        <a href="#ourstory" class="text-center tm-down-arrow-link">
+          <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
+        </a>
+      </div>      
+    </section>
+
+    <!-- New Section: Our Story -->
+    <section id="ourstory" class="tm-section-pad-top">
+      <div class="container">
+        <div class="row tm-content-box">
+          <div class="col-md-6">
+            <!-- Replace with your story image; added inline style to reduce the image size and Bootstrap centering classes -->
+            <img src="img/gac.jpeg" alt="Our Story Image" class="img-fluid mx-auto d-block" style="max-width: 85%;">
+          </div>
+          <div class="col-md-6">
+            <div class="tm-intro-text-container">
+              <h2 class="tm-text-primary mb-4 tm-section-title">Our Story</h2>
+              <p class="mb-4 tm-intro-text">
+                Founded by a former international basketball player with collegiate experience, Future Athlete Agency was created from firsthand experience with the challenges international athletes face when pursuing basketball opportunities in the U.S. With in-depth knowledge of the NCAA/NAIA system, recruiting rules, and athlete development, we provide the essential tools and guidance to succeed. At Future Athlete Agency, the founder’s story resonates in every aspect of our work. His legacy is a constant reminder that while the path to success can be arduous and lonely, it is also filled with moments of growth, resilience, and hope. By sharing his journey, he empowers international athletes not only with technical skills but also with the personal insights needed to navigate the challenges off the court, helping them build confidence, adapt culturally, and ultimately, realize their fullest potential.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Our Services -->
+    <section id="whatwedo" class="tm-section-pad-top">
+      <div class="container">
+            <div class="row tm-content-box">
+                <div class="col-lg-12 col-xl-12">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4 tm-section-title">Our Services</h2>
+                        <p class="mb-4 tm-intro-text">
+                          Our vision is to bridge the gap between international talent and U.S. college sport programs, creating opportunities for athletes to showcase their skills, earn scholarships, and build successful careers on and off the court. Future Athlete Agency is your trusted partner in sports talent management. We specialize in talent player development, and contract negotiation to elevate the careers of aspiring athletes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row tm-content-box">
+        		<div class="col-lg-1">
+                    <!-- Icon for Recruiting Guidance -->
+                    <i class="fas fa-binoculars fa-3x text-center tm-icon"></i>
+                </div>
+                <div class="col-lg-5">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4">Recruiting Guidance</h2>
+                        <ul class="mb-4 tm-intro-text">
+                          <li>Helping athletes get noticed by U.S. coaches</li>
+                          <li>How to communicate with college programs</li>
+                          <li>Building an athlete’s profile to attract recruiters</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-1">
+                    <!-- Icon for NCAA/NAIA Eligibility Assistance -->
+                    <i class="fas fa-graduation-cap fa-3x text-center tm-icon"></i>
+                </div>
+                <div class="col-lg-5">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4">NCAA/NAIA Eligibility Assistance</h2>
+                        <ul class="mb-4 tm-intro-text">
+                          <li>Ensuring athletes meet academic and athletic requirements</li>
+                          <li>Guidance on NCAA &amp; NAIA rules and registration</li>
+                          <li>Clearinghouse registration and eligibility help</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row tm-content-box">
+        		<div class="col-lg-1">
+                    <!-- Icon for Visa & School Application Assistance -->
+                    <i class="fas fa-file-alt fa-3x text-center tm-icon"></i>
+                </div>
+                <div class="col-lg-5">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4">Visa &amp; School Application Assistance</h2>
+                        <ul class="mb-4 tm-intro-text">
+                          <li>Helping athletes apply to U.S. schools</li>
+                          <li>Guidance on student visas and paperwork</li>
+                          <li>Ensuring all documents are ready for a smooth transition</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-1">
+                    <!-- Icon for Training & Development -->
+                    <i class="fas fa-running fa-3x text-center tm-icon"></i>
+                </div>
+                <div class="col-lg-5">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4">Training &amp; Development</h2>
+                        <ul class="mb-4 tm-intro-text">
+                          <li>Personalized training programs</li>
+                          <li>Skill development sessions</li>
+                          <li>Strength and conditioning advice</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </section>
+    
+    <!-- Section: Testimonials -->
+    <section id="testimonials" class="tm-section-pad-top tm-parallax-2">
+      <div class="container tm-testimonials-content">
+        <div class="row">
+          <div class="col-lg-12 tm-content-box">
+            <h2 class="text-white text-center mb-4 tm-section-title">Testimonials</h2>
+            <p class="mx-auto tm-section-desc text-center">
+                Hear from the athletes who have taken their careers to new heights with our support.
+              </p>
+            <div class="mx-auto tm-gallery-container tm-gallery-container-2">
+              <div class="tm-testimonials-carousel">
+                <figure class="tm-testimonial-item">
+                  <img src="img/testimonial-img-01.jpeg" alt="Athlete Image" class="img-fluid mx-auto">
+                  <blockquote>"I couldn’t have reached the professional level without their dedicated support. They really are good at what they do!"</blockquote>
+                  <figcaption>Marko Vojvodic (Professional Athlete)</figcaption>
+                </figure>
+                <!--
+                <figure class="tm-testimonial-item">
+                  <img src="img/testimonial-img-02.jpg" alt="Athlete Image" class="img-fluid mx-auto">
+                  <blockquote>"Their expert guidance and personalized coaching turned my potential into success."</blockquote>
+                  <figcaption>Jane Smith (Rising Star)</figcaption>
+                </figure>
+                <figure class="tm-testimonial-item">
+                  <img src="img/testimonial-img-03.jpg" alt="Athlete Image" class="img-fluid mx-auto">
+                  <blockquote>"I couldn’t have reached the professional level without their dedicated support."</blockquote>
+                  <figcaption>Alex Johnson (College Athlete)</figcaption>
+                </figure>
+                <figure class="tm-testimonial-item">
+                  <img src="img/testimonial-img-04.jpg" alt="Athlete Image" class="img-fluid mx-auto">
+                  <blockquote>"They negotiated the best deal for my career, and I’m forever grateful."</blockquote>
+                  <figcaption>Chris Lee (International Player)</figcaption>
+                </figure>
+                <figure class="tm-testimonial-item">
+                  <img src="img/testimonial-img-02.jpg" alt="Athlete Image" class="img-fluid mx-auto">
+                  <blockquote>"From scouting to contract negotiation, their expertise is unmatched."</blockquote>
+                  <figcaption>Sam Taylor (Pro Athlete)</figcaption>
+                </figure>
+                -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tm-bg-overlay"></div>
+    </section>
+    
+    <!-- Section: Gallery -->
+    <section id="gallery" class="tm-section-pad-top">
+      <div class="container tm-container-gallery">
+        <div class="row">
+          <div class="text-center col-12">
+              <h2 class="tm-text-primary tm-section-title mb-4">Gallery of Highlights</h2>
+              <p class="mx-auto tm-section-desc">
+                Explore moments from games, training sessions, community events and discover the beauty of Los Angeles.
+              </p>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="mx-auto tm-gallery-container">
+                    <div class="grid tm-gallery">
+                      <a href="img/labeach.jpeg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/labeach.jpeg" alt="Game Action" class="img-fluid">
+                          <figcaption>
+                            <h2><i>LA <span>Beachside</span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/court.jpeg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/court.jpeg" alt="Game-Winning Shot" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Training <span>Court</span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/nova.jpg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/nova.jpg" alt="Team Spirit" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Game-Winning <span>Shot</span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/gamepic.jpeg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/gamepic.jpeg" alt="Dunk Showcase" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Attending & watching <span>Matches</span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/ncaa.png">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/ncaa.png" alt="Training Session" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Live Broadcast<span> NCAA</span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/beautyofla.jpeg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/beautyofla.jpeg" alt="Urban Basketball" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Beauty of <span>LA</span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/testemonial_game.jpeg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/testemonial_game.jpeg" alt="Court Highlights" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Athlete <span>Highlights</span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="tm-section-pad-top tm-parallax-2">
+      <div class="container tm-container-contact">
+        <div class="row">
+            <div class="text-center col-12">
+                <h2 class="tm-section-title mb-4">Contact Us</h2>
+                <p class="mb-5">
+                  Get in touch with Future Athlete Agency for consultations, bookings, or more information about our services.
+                </p><br>
+            </div>
+            
+            <div class="col-sm-12 col-md-6">
+              <!-- Updated contact form to use Web3Forms with hCaptcha integration -->
+              <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="ee30a7a6-c530-4700-890f-c7730b8d09eb">
+                <!-- Form Inputs with autocomplete attributes -->
+                <input id="name" name="name" type="text" placeholder="Your Name" class="tm-input" required autocomplete="name">
+                <input id="email" name="email" type="email" placeholder="Your Email" class="tm-input" required autocomplete="email">
+                <textarea id="message" name="message" rows="8" placeholder="Message" class="tm-input" required autocomplete="on"></textarea>
+                <!-- hCaptcha Integration -->
+                <div class="h-captcha" data-captcha="true"></div>
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <button type="submit" class="btn tm-btn-submit">Submit</button>
+              </form>
+            </div>
+            
+            <div class="col-sm-12 col-md-6">
+                <!-- Replaced Chat Online with Instagram Link -->
+                <div class="contact-item">
+                  <a rel="nofollow" href="https://www.instagram.com/futureathleteagency/#" class="item-link">
+                      <i class="fab fa-2x fa-instagram mr-4"></i>
+                      <span class="mb-0">Instagram</span>
+                  </a>
+                </div>
+                
+                <div class="contact-item">
+                  <a rel="nofollow" href="mailto:future.athlete.agency@gmail.com" class="item-link">
+                      <i class="far fa-2x fa-envelope mr-4"></i>
+                      <span class="mb-0">future.athlete.agency@gmail.com</span>
+                  </a>
+                </div>
+                
+                <div class="contact-item">
+                  <a rel="nofollow" href="https://www.google.com/maps/place/12427+Milton+St,+Los+Angeles,+CA+90066,+USA/@33.9868941,-118.4167813,21z/data=!4m6!3m5!1s0x80c2ba74d1d2fdd1:0xed495f924253669!8m2!3d33.986869!4d-118.416889!16s%2Fg%2F11c17gzz7c?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D" class="item-link">
+                      <i class="fas fa-2x fa-map-marker-alt mr-4"></i>
+                      <span class="mb-0">Our Location</span>
+                  </a>
+                </div>
+                
+                <!-- Combined telephone and WhatsApp option -->
+                <div class="contact-item">
+                  <a rel="nofollow" href="tel:+16576089860" class="item-link">
+                      <i class="fas fa-2x fa-phone-square mr-2"></i>
+                      <span class="mb-0">+1 6576089860</span>
+                  </a>
+                  <span class="contact-split">/</span>
+                  <a rel="nofollow" href="https://wa.me/16576089860" class="item-link">
+                      <i class="fab fa-2x fa-whatsapp mr-2"></i>
+                      <span class="mb-0">WhatsApp</span>
+                  </a>
+                </div>
+                
+                <!-- Added FAA-logo.png at the contact corner -->
+                <img src="img/FAA-logo.png" alt="Future Athlete Agency Logo" class="contact-logo">
+                
+                <div class="contact-item">&nbsp;</div>
+            </div>
+        </div>
+      </div>
+      <footer class="tm-footer">
+          <p class="mb-0">
+          Copyright &copy; 2025 All rights reserved, Future Athlete Agency.  Based in California, Los Angeles. Designed by <a rel="nofollow" href="https://jchulev.com/" title="Developer">Chulev.</a>
+          </p>
+        </footer>
+    </section>
+    
+    <script src="js/jquery-1.9.1.min.js"></script>     
+    <script src="slick/slick.min.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>     
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Web3Forms script for hCaptcha integration -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script>
+      // Client Side Validation to ensure hCaptcha is filled
+      const form = document.getElementById('contact-form');
+      form.addEventListener('submit', function(e) {
+          const hCaptcha = form.querySelector('textarea[name="h-captcha-response"]');
+          if (!hCaptcha || hCaptcha.value.trim() === "") {
+              e.preventDefault();
+              alert("Please complete the captcha before submitting the form.");
+              return;
+          }
+      });
+      
+      function getOffSet(){
+        var _offset = 450;
+        var windowHeight = window.innerHeight;
+        if(windowHeight > 500) {
+          _offset = 400;
+        } 
+        if(windowHeight > 680) {
+          _offset = 300;
+        }
+        if(windowHeight > 830) {
+          _offset = 210;
+        }
+        return _offset;
+      }
+      function setParallaxPosition($doc, multiplier, $object){
+        var offset = getOffSet();
+        var from_top = $doc.scrollTop(),
+          bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
+        $object.css({"background-position" : bg_css });
+      }
+      // Parallax function - Adapted based on https://codepen.io/roborich/pen/wpAsm        
+      var background_image_parallax = function($object, multiplier, forceSet){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        if(forceSet) {
+          setParallaxPosition($doc, multiplier, $object);
+        } else {
+          $(window).scroll(function(){          
+            setParallaxPosition($doc, multiplier, $object);
+          });
+        }
+      };
+      var background_image_parallax_2 = function($object, multiplier){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        $object.css({"background-attachment" : "fixed"});
+        $(window).scroll(function(){
+          if($(window).width() > 768) {
+            var firstTop = $object.offset().top,
+                pos = $(window).scrollTop(),
+                yPos = Math.round((multiplier * (firstTop - pos)) - 186);              
+            var bg_css = 'center ' + yPos + 'px';
+            $object.css({"background-position" : bg_css });
+          } else {
+            $object.css({"background-position" : "center" });
+          }
+        });
+      };
+      $(function(){
+        // Hero Section - Background Parallax
+        background_image_parallax($(".tm-parallax"), 0.30, false);
+        background_image_parallax_2($("#contact"), 0.80);   
+        background_image_parallax_2($("#testimonials"), 0.80);   
+        // Handle window resize
+        window.addEventListener('resize', function(){
+          background_image_parallax($(".tm-parallax"), 0.30, true);
+        }, true);
+        // Detect window scroll and update navbar
+        $(window).scroll(function(e){          
+          if($(document).scrollTop() > 120) {
+            $('.tm-navbar').addClass("scroll");
+          } else {
+            $('.tm-navbar').removeClass("scroll");
+          }
+        });
+        // Close mobile menu after click 
+        $('#tmNav a').on('click', function(){
+          $('.navbar-collapse').removeClass('show'); 
+        });
+        // Scroll to corresponding section with animation
+        $('#tmNav').singlePageNav({
+          'easing': 'easeInOutExpo',
+          'speed': 600
+        });        
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 600, 'easeInOutExpo', function(){
+              window.location.hash = hash;
+            });
+          }
+        });
+        // Pop up
+        $('.tm-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: { enabled: true }
+        });
+        $('.tm-testimonials-carousel').slick({
+          dots: true,
+          prevArrow: false,
+          nextArrow: false,
+          infinite: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2
+              }
+            }, 
+            {
+              breakpoint: 480,
+              settings: {
+                  slidesToShow: 1
+              }
+            }
+          ]
+        });
+        // Gallery
+        $('.tm-gallery').slick({
+          dots: true,
+          infinite: false,
+          slidesToShow: 5,
+          slidesToScroll: 2,
+          responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+        });
+      });
+    </script>
+  </body>
+</html>
